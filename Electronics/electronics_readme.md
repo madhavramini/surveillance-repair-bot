@@ -64,3 +64,5 @@ Simulating an electrical failure detection and repair bot on Tinkercad was compl
 
 
 This setup provided a basic framework for simulating a bot that could move, detect obstacles, and control a robotic arm using servos. The actual implementation with a Raspberry Pi and advanced sensors like LiDAR would require more complex programming and setup, but this provided a good starting point for simulation on Tinkercad.
+
+Link: https://www.tinkercad.com/things/44Fd87dmcNH-surveillance-bot-draft?sharecode=EgMoR50ONtu1ITEB9YMJjjekzgPnxbdmKD6MPGY5Jns
