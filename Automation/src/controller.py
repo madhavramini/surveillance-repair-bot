@@ -47,34 +47,13 @@ desired_angular_vel = 0.0
 
 rate = rospy.Rate(10)  # 10 Hz
 
-global current_linear_vel, current_angular_vel
+rn_linear_vel=odom_sub.twist.twist.linear.x
+rn_angular_vel=odom_sub.twist.twist.angular.z
 
-linear_output = linear_pid.update(desired_linear_vel, current_linear_vel)
-angular_output = angular_pid.update(desired_angular_vel, current_angular_vel)
+linear_output = linear_pid.update(desired_linear_vel, rn_linear_vel)
+angular_output = angular_pid.update(desired_angular_vel, rn_angular_vel)
 msg = Twist()
 msg.linear.x = 0.2
 msg.angular.z = 0.2
 pub.publish(msg)
 rate.sleep()
-
-def odom_callback(data):
-    global current_linear_vel, current_angular_vel
-    current_linear_vel = data.twist.twist.linear.x
-    current_angular_vel = data.twist.twist.angular.z
-
-'''def follow_path(bot_path):
-    robot_x, robot_y, robot_theta = 0.0, 0.0, 0.0
-    pid = PIDController(Kp=1.0, Ki=0.1, Kd=0.01)
-
-    for point in bot_path:
-        target_x, target_y = point
-        error_x = target_x - robot_x
-        error_y = target_y - robot_y
-        total_error = (error_x * 2 + error_y * 2) ** 0.5
-
-        steering_angle = pid.compute(total_error)
-
-        # Update robot's position and heading (apply steering_angle)
-        # Your robot's kinematics and dynamics come into play here!
-
-        print(f"Steering angle: {steering_angle:.2f} degrees")'''
