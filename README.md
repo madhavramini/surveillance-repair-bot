@@ -1,2 +1,7 @@
-# surveillance-repair-bot
-Project by team ARC (BPHC) for ERC Hackathon
+# Surveillance Repair Bot
+Project by team ARC (BPHC) for ERC Hackathon.
+
+### Some key features:
+1. Two forearms with sprocket mechanism alongside base sprocket to facilitate stair climbing.
+2. 3 DOF robotic arm with a camera on gripper.
+3. Camera and LiDAR for navigation.
