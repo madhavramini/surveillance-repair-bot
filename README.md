@@ -12,7 +12,7 @@ Project by team ARC (BPHC) for ERC Hackathon
 1. Lokesh
 2. Vibha Balaji
 #### Mechanical
-1. Madhav Ramini
+1. Madhav Ramini (Lead)
 2. Sudhansh Pillai
 ---
 
